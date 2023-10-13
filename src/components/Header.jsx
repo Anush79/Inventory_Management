@@ -9,8 +9,8 @@ export default function Header(){
       <NavLink to='/'>Home</NavLink>
       <NavLink to='/inventory'>Inventory</NavLink>
       <NavLink to='/sales'>Sales</NavLink>
-      <NavLink to='https://github.com/Anush79/Inventory_Management'><GitHubIcon/></NavLink>
-      <NavLink to='https://replit.com/@AnushkaJaiswal7/inventoryManagement'><StorageIcon/></NavLink>
+      <NavLink to='https://github.com/Anush79/Inventory_Management' target="_blank"><GitHubIcon/></NavLink>
+      <NavLink to='https://replit.com/@AnushkaJaiswal7/inventoryManagement'target="_blank"><StorageIcon/></NavLink>
 
     </nav>
   </header>

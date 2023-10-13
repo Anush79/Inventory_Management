@@ -10,7 +10,7 @@ export default function Inventory() {
   const dispatch = useDispatch();
   const inventoryItems = useSelector((state) => state?.inventoryItems);
   const loading = useSelector((state) => state?.loading);
-  console.log("inventoryItems", inventToUpdate);
+
 
   useEffect(() => {
     dispatch(getInventoryData());
@@ -21,7 +21,7 @@ export default function Inventory() {
   useEffect(() => {}, [inventToUpdate]);
   return (
     <div>
-      <h1>Inventory Management <InventoryIcon/></h1>
+      <h1>Inventory Management <InventoryIcon fontSize="large"/></h1>
       {inventToUpdate && <InventoryForm toUpdate={inventToUpdate} />}
       {!inventToUpdate && <InventoryForm />}
       <div className="materials">

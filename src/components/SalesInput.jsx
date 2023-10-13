@@ -14,7 +14,6 @@ export function SalesForm() {
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
-    console.log({name, value})
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
   const onSubmitHandler = (e) => {
@@ -33,7 +32,7 @@ export function SalesForm() {
   }, []);
   return (
     <div>
-      <h4>Add Sales Data</h4>
+      <b>Add Sales Data</b>
       <form onSubmit={onSubmitHandler}>
         <label htmlFor="">
           Name:

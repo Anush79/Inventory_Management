@@ -23,13 +23,14 @@ export default function Home() {
         <div>Total Inventory cost = ₹ {calculateTotal(inventoryItems)}</div>
       )}
       <div>Total Revenue = ₹ {calculateTotal(sales)}</div>
+      <hr/>
       <label htmlFor="invent">
         <input
         id="invent"
           type="radio"
           name="chart"
           checked={toggleChart === "invent"}
-          onClick={() => {
+          onChange={() => {
             setToggleChart("invent");
           }}
         />
@@ -41,7 +42,7 @@ export default function Home() {
           type="radio"
           name="chart"
           checked={toggleChart === "sales"}
-          onClick={() => {
+          onChange={() => {
             setToggleChart("sales");
           }}
         />

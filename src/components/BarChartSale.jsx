@@ -6,15 +6,23 @@ import { Chart as ChartJs } from 'chart.js/auto'
 import 'chart.js';
 
 export default function BarChartSales() {
-  const inventoryItems = useSelector((state) => state?.inventoryItems);
+
   const sales = useSelector((state) => state?.sales);
+  const salesBreakDown = sales?.reduce(
+    (acc, curr) => ({
+      ...acc,
+      [curr.product.name]:
+        (acc[curr.product.name] || 0) + (curr.price * curr.quantity || 0),
+    }),
+    {}
+  );
 
   const [chartData, setChartData] = useState({
-    labels: sales?.map(item => item?.product?.name),
+    labels: Object.keys(salesBreakDown),
     datasets: [
       {
         label: "Total Sale price",
-        data: sales?.map(item => item?.price*item?.quantity),
+        data: Object.values(salesBreakDown),
         backgroundColor: [
           "#555"
         ],
