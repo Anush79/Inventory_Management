@@ -15,8 +15,9 @@ header{
 }
 header nav{
   display: flex;
-  min-width: 200px;
+  min-width: 270px;
   justify-content: space-between;
+  align-items: center;
 }
 header nav a{
   text-decoration: none;
@@ -110,5 +111,5 @@ button {
 }
 .chart{
  width:100vh;
- 
+
 }
