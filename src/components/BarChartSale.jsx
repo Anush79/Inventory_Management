@@ -11,8 +11,8 @@ export default function BarChartSales() {
   const salesBreakDown = sales?.reduce(
     (acc, curr) => ({
       ...acc,
-      [curr.product.name]:
-        (acc[curr.product.name] || 0) + (curr.price * curr.quantity || 0),
+      [curr?.product?.name]:
+        (acc[curr?.product?.name] || 0) + (curr?.price * curr?.quantity || 0),
     }),
     {}
   );
