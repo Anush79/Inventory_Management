@@ -28,7 +28,7 @@ export default function Inventory() {
         <ul>
         {!loading && inventoryItems?.map((item) => (
           <li key={item._id}>
-            <b>{item?.name} </b>|| Price ₹ {item?.price} || Quantity : {item.quantity}
+            <b>{item?.name} </b>|| Price ₹ {item?.price} || Quantity : {item?.quantity}
             <span>
                <EditIcon title="Update this item"
               onClick={() => {

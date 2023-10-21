@@ -48,10 +48,10 @@ export default function Home() {
         />
         Sales Statistics
       </label>
-      {toggleChart === 'invent' &&
+      {toggleChart === 'invent' && inventoryItems[0] &&
         <BarChart />}
         {
-          toggleChart === 'sales' &&
+          toggleChart === 'sales' && sales[0] &&
           <BarChartSales />
         }
     </div>
